@@ -33,3 +33,20 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# The secret token in the form "GODADDY_API_KEY:GODADDY_API_SECRET"
+token: ""
+
+clusterIssuer:
+  enabled: false
+  # Acme endpoint.
+  # Defaults to letsencrypt stage.
+  # Use https://acme-v02.api.letsencrypt.org/directory for prod.
+  name: letsencrypt-staging
+  endpoint: https://acme-staging-v02.api.letsencrypt.org/directory
+  email: foo@cluster.local
+  # 
+  selector:
+    dnsZones:
+    - 'example.com'
+
