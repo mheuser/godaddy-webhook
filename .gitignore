@@ -1,6 +1,7 @@
 # Folders to be excluded
 .idea
 _out
+.vscode
 
 # Test binary, build with `go test -c`
 *.test
